@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GamjiBlog — Home</title>
+
+  <!-- Tailwind CDN + custom color (Jungle green) -->
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jungle: '#29AB87'
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white sticky top-0 z-40 border-b">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3">
+            <img src="image/logo.jpg" alt="GamjiBlog logo" class="w-10 h-10 rounded-md object-cover">
+            <div>
+              <span class="text-jungle font-bold">GamjiBlog</span>
+              <div class="text-xs text-gray-500 -mt-1">University news & student life</div>
+            </div>
+          </a>
+        </div>
+
+        <nav class="hidden md:flex space-x-4" aria-label="Top Navigation">
+          <a href="index.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Home</a>
+          <a href="faculties.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Faculties</a>
+          <a href="senate.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Senate</a>
+          <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Hostels</a>
+          <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Library</a>
+          <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Sports</a>
+          <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Student Bodies</a>
+          <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Alumni</a>
+          <a href="contact.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Contact</a>
+        </nav>
+
+        <!-- search + mobile toggle -->
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center bg-gray-50 border rounded-full px-3 py-1">
+            <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+            <input type="search" placeholder="Search campus news..." aria-label="Search" class="bg-transparent outline-none text-sm">
+          </div>
+
+          <div class="md:hidden">
+            <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md hover:bg-gray-100">
+              <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+              </svg>
+              <svg id="menu-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 space-y-1">
+        <a href="/" class="block px-2 py-2 text-gray-700 rounded hover:bg-gray-50">Home</a>
+        <a href="faculties.html" class="block px-2 py-2 text-gray-700 rounded hover:bg-gray-50">Faculties</a>
+        <a href="senate.html" class="block px-2 py-2 text-gray-700 rounded hover:bg-gray-50">Senate</a>
+        <a href="contact.html" class="block px-2 py-2 text-gray-700 rounded hover:bg-gray-50">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <!-- Hero -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+      <div class="lg:col-span-2">
+        <article class="relative bg-white rounded-2xl shadow-md overflow-hidden">
+          <img src="image/hero.jpg" alt="Convocation spotlight" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <span class="inline-block bg-jungle text-white text-xs font-semibold px-3 py-1 rounded-full">FEATURED</span>
+            <h1 class="mt-4 text-2xl md:text-3xl font-extrabold">Convocation week: New research centres and scholarships announced</h1>
+            <div class="mt-2 text-sm text-gray-500">By Admin • Oct 12, 2025 • Hostels, Research</div>
+            <p class="mt-4 text-gray-700">University leadership announced three interdisciplinary research centres and a set of scholarships focused on sustainable technology and community development.</p>
+
+            <div class="mt-6 flex gap-3">
+              <a href="#" class="inline-flex items-center px-4 py-2 rounded-lg bg-jungle text-white font-semibold">Read Article</a>
+              <a href="#" class="inline-flex items-center px-4 py-2 rounded-lg border text-jungle font-semibold">Save</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Categories grid -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <section class="bg-white rounded-lg shadow p-4 flex gap-4">
+            <img src="image/fac1.jpg" alt="Academics" class="w-28 h-20 object-cover rounded">
+            <div>
+              <h3 class="font-semibold">New curriculum for Computer Engineering launched</h3>
+              <p class="mt-1 text-sm text-gray-600">Faculty of Engineering updates the curriculum to include AI & embedded systems tracks.</p>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow p-4 flex gap-4">
+            <img src="image/fac2.jpg" alt="Research" class="w-28 h-20 object-cover rounded">
+            <div>
+              <h3 class="font-semibold">Sustainable energy research gets grant</h3>
+              <p class="mt-1 text-sm text-gray-600">A multi-year grant will support solar microgrid projects on campus and nearby communities.</p>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow p-4 flex gap-4">
+            <img src="image/sports.png" alt="Sports" class="w-28 h-20 object-cover rounded">
+            <div>
+              <h3 class="font-semibold">Interfaculty games — schedule released</h3>
+              <p class="mt-1 text-sm text-gray-600">Matches across football, basketball and athletics will run across the next three weeks.</p>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow p-4 flex gap-4">
+            <img src="image/hostels.jpg" alt="Student Life" class="w-28 h-20 object-cover rounded">
+            <div>
+              <h3 class="font-semibold">New workshops: career readiness & startups</h3>
+              <p class="mt-1 text-sm text-gray-600">Free workshops for students: CV writing, startup basics, interview practice.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- CTA band -->
+        <div class="mt-6 bg-jungle text-white rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h3 class="text-lg font-semibold">Stay updated — subscribe to campus news</h3>
+            <p class="mt-1 text-sm opacity-90">Weekly newsletter with top campus stories and events.</p>
+          </div>
+          <form class="flex gap-2 mt-2 md:mt-0" onsubmit="return false;" aria-label="Subscribe form">
+            <input type="email" placeholder="you@university.edu" class="rounded-lg px-3 py-2 text-sm outline-none" required>
+            <button class="bg-white text-jungle font-semibold px-4 py-2 rounded-lg">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right column: top stories + quick links -->
+      <aside>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-bold">Most Recent</h3>
+          <ul class="mt-4 space-y-4">
+            <li class="flex gap-3 items-start">
+              <img src="image/thumb1.png" alt="" class="w-14 h-12 object-cover rounded">
+              <div>
+                <a href="#" class="font-semibold block">Scholarship winners announced</a>
+                <div class="text-xs text-gray-500">Oct 11 • Grants</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <img src="image/thumb1.png" alt="" class="w-14 h-12 object-cover rounded">
+              <div>
+                <a href="#" class="font-semibold block">New shuttle timings for campus</a>
+                <div class="text-xs text-gray-500">Oct 9 • Logistics</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <img src="image/sug.jpg" alt="" class="w-14 h-12 object-cover rounded">
+              <div>
+                <a href="#" class="font-semibold block">Student body election results</a>
+                <div class="text-xs text-gray-500">Oct 7 • Student Affairs</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4 bg-white rounded-lg shadow p-4">
+          <h4 class="font-semibold">Quick One</h4>
+          <p class="mt-2 text-sm text-gray-600">Join the community volunteer program this weekend — sign up to reserve your seat.</p>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="bg-jungle text-white px-3 py-2 rounded-lg text-sm">Sign Up</a>
+            <a href="#" class="border px-3 py-2 rounded-lg text-sm">Learn More</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Trending strip (desktop) -->
+    <section class="mt-8 hidden md:flex items-center gap-3">
+      <span class="text-jungle font-semibold">Trending</span>
+      <div class="flex gap-6 overflow-auto pb-2">
+        <a class="text-gray-600 whitespace-nowrap" href="#">New library hours</a>
+        <a class="text-gray-600 whitespace-nowrap" href="#">Sports gala highlights</a>
+        <a class="text-gray-600 whitespace-nowrap" href="#">Hostel allocation update</a>
+        <a class="text-gray-600 whitespace-nowrap" href="#">Alumni meetup registration</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="image/logo.jpg" alt="logo" class="w-10 h-10 rounded-md object-cover">
+          <div>
+            <div class="font-bold text-jungle">GamjiBlog</div>
+            <div class="text-sm text-gray-600">Daily updates from across campus.</div>
+          </div>
+        </div>
+        <div class="mt-4 text-sm text-gray-600">© <span id="year"></span> GamjiBlog</div>
+      </div>
+
+      <div class="md:col-span-1">
+        <h4 class="font-semibold">Stay connected</h4>
+        <div class="mt-3 flex gap-3">
+          <a href="#" class="p-2 rounded bg-white shadow"><span class="sr-only">Facebook</span>f</a>
+          <a href="#" class="p-2 rounded bg-white shadow"><span class="sr-only">Twitter</span>t</a>
+          <a href="#" class="p-2 rounded bg-white shadow"><span class="sr-only">LinkedIn</span>in</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <div class="mt-3 text-sm text-gray-600">
+          info@university.edu<br>
+          +234 800 000 0000
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

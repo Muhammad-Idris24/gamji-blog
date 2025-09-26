@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GamjiBlog — Senate</title>
+
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = { theme: { extend: { colors: { jungle: '#29AB87' }}}};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900">
+
+  <header class="bg-white sticky top-0 z-40 border-b">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <a href="/" class="flex items-center gap-3">
+            <img src="image/logo.jpg" alt="CampusPulse logo" class="w-10 h-10 rounded-md object-cover">
+            <div>
+              <span class="text-jungle font-bold">GamjiBlog</span>
+              <div class="text-xs text-gray-500 -mt-1">University news & student life</div>
+            </div>
+          </a>
+        </div>
+
+        <nav class="hidden md:flex space-x-4" aria-label="Top Navigation">
+          <a href="/" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Home</a>
+          <a href="faculties.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Faculties</a>
+          <a href="senate.html" class="px-3 py-2 text-sm text-jungle font-semibold">Senate</a>
+          <a href="contact.html" class="px-3 py-2 text-sm text-gray-700 hover:text-jungle">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center bg-gray-50 border rounded-full px-3 py-1">
+            <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+            <input type="search" placeholder="Search senate news..." class="bg-transparent outline-none text-sm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <header class="mb-6">
+      <h1 class="text-2xl font-extrabold">Senate</h1>
+      <p class="text-gray-600 mt-2">Announcements and decisions from the Senate and university governance.</p>
+    </header>
+
+    <section class="space-y-4">
+      <article class="bg-white rounded-lg shadow p-4">
+        <h2 class="font-semibold text-lg">Senate approves new research centres</h2>
+        <div class="mt-2 text-xs text-gray-500">Oct 12 • Senate</div>
+        <p class="mt-2 text-gray-700">The Senate has voted to approve three new interdisciplinary research centres focused on sustainable development and technology transfer.</p>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-4">
+        <h2 class="font-semibold text-lg">Policy on open access publishing</h2>
+        <div class="mt-2 text-xs text-gray-500">Sep 28 • Senate</div>
+        <p class="mt-2 text-gray-700">New guidelines to promote open access publishing and research dissemination were adopted.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-gray-50 border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex justify-between items-center">
+      <div class="text-sm text-gray-600">© <span id="year-senate">2025</span> GamjiBlog</div>
+      <div class="text-sm text-gray-600">info@university.edu</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

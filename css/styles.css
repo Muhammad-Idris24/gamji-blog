@@ -1,0 +1,43 @@
+/* styles.css — site-level overrides & non-tailwind rules */
+
+/* set default focus outline for accessibility */
+:focus {
+  outline: 3px solid rgba(41,171,135,0.18);
+  outline-offset: 2px;
+}
+
+/* small shadow utility used across site */
+.shadow-md {
+  box-shadow: 0 6px 24px rgba(15,15,15,0.06);
+}
+
+/* small helper to hide elements visually but keep them accessible */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ensure images don't overflow containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* mobile menu open animation (small) */
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-menu-open {
+    animation: slideIn 180ms ease-out forwards;
+  }
+  @keyframes slideIn {
+    from { transform: translateY(-6px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
